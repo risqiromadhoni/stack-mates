@@ -8,8 +8,14 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": ["node_modules", ".next", "tsconfig*.json", "package.json"],
-		"include": ["src", "next.config.ts"]
+		"ignore": [
+			"node_modules",
+			"__snapshots__",
+			".next",
+			"tsconfig*.json",
+			"package.json"
+		],
+		"include": ["src", "next.config.ts", "jest.config.ts", "jest.setup.ts"]
 	},
 	"formatter": {
 		"enabled": true,
