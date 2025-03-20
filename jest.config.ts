@@ -37,7 +37,9 @@ const config: Config = {
 	coverageProvider: "v8",
 
 	// A list of reporter names that Jest uses when writing coverage reports
-	coverageReporters: ["html", "json", "json-summary"],
+	coverageReporters: !process.env.CI
+		? ["html", "json", "clover", "text"]
+		: ["json-summary"],
 
 	// An object that configures minimum threshold enforcement for coverage results
 	// coverageThreshold: undefined,
@@ -153,15 +155,14 @@ const config: Config = {
 	// testLocationInResults: false,
 
 	// The glob patterns Jest uses to detect test files
-	// testMatch: [
-	//   "**/__tests__/**/*.[jt]s?(x)",
-	//   "**/?(*.)+(spec|test).[tj]s?(x)"
-	// ],
+	testMatch: ["<rootDir>/src/**/__tests__/**/*.test.[jt]s?(x)"],
 
 	// An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-	// testPathIgnorePatterns: [
-	//   "/node_modules/"
-	// ],
+	testPathIgnorePatterns: [
+		"<rootDir>/.next/",
+		"<rootDir>/node_modules/",
+		"<rootDir>/e2e/",
+	],
 
 	// The regexp pattern or array of patterns that Jest uses to detect test files
 	// testRegex: [],
