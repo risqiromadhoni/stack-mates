@@ -20,7 +20,8 @@
 			"src",
 			"next.config.ts",
 			"jest.config.ts",
-			"jest.setup.ts"
+			"jest.setup.ts",
+			"commitlint.config.cjs"
 		]
 	},
 	"formatter": {
