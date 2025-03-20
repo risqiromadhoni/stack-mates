@@ -21,6 +21,8 @@
 			"next.config.ts",
 			"jest.config.ts",
 			"jest.setup.ts",
+			"release.config.cjs",
+			"playwright.config.ts",
 			"commitlint.config.cjs"
 		]
 	},
